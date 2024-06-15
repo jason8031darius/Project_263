@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Advance Calculator</title>
+   <style>
+      body {
+         text-align: center;
+         margin-top: 50px;
+         font-size: 20px;
+         background-color: #f0f0f0;
+      }
+
+      h1 {
+         color: #333; /* Change the text color as per your choice */
+      }
+
+      h5 {
+         color: #666; /* Change the text color as per your choice */
+         background-color: #ddd; /* Change the background-color as per your choice */
+      }
+
+      input[type="submit"] 
+      {
+         background-color: #4CAF50;
+         color: white;
+         margin: 4px 2px;
+      }
+   </style>
+</head>
+<body>
+   <h1>Advance Calculator!</h1>
+   <br>
+   <img width="20%" height="20%" src="{{url_for('static', filename='img.png') }}" />
+   <br><br>
+   <form method="POST">
+      <label>Enter expression</label>
+      <br><br>
+      <select class="is-focused is-large" name="operation" aria-label="operationDropdown">
+         <option>Choose operation</option>
+         <option value="simplify">Simplify</option>
+         <option value="factor">Factor</option>
+      </select>
+      <input placeholder="Expression" name="text">
+      <input type="submit">
+   </form>
+   <p>Your equation is {{equation}} = {{ result }}</p>
+   <br><br><br>
+   <footer>
+      <h5>Created By - Jason Darius</h5>
+   </footer>
+</body>
+</html>
